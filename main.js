@@ -4,7 +4,7 @@ let nadpis = document.querySelector("h1");
 nadpis.classList.add("zluty");
 
 
-let odstavec = document.getElementsByClassName ("odstavec");
+let odstavec = document.getElementsByClassName ("odstavec")[0];
 
 function Ztucni(udalost){
 udalost.target.style.fontWeight = "bold";
@@ -12,6 +12,11 @@ udalost.target.style.fontWeight = "bold";
 
 function Vratzpet(udalost) {
 udalost.target.style.fontWeight ="normal";
+}
+
+function Zmenbarvu(){
+
+odstavec.classList.add("cervena");
 }
 
 /* 
@@ -44,3 +49,7 @@ function Zastav(elementSelector) {
     let audioElement = document.querySelector(elementSelector);
     audioElement.pause();
 }
+
+
+
+
