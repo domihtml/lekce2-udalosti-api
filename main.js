@@ -24,3 +24,23 @@ function Vracej() {
     document.querySelector(".odstavecdva").style.fontWeight = "normal";
 }
 */
+
+/**  
+* @param {string} elementSelector
+* 
+*/
+
+function Prehraj(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.play();
+}
+
+/**  
+* @param {string} elementSelector
+* 
+*/
+
+function Zastav(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.pause();
+}
