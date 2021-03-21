@@ -18,17 +18,12 @@ function Zmenbarvu(){
 odstavec.classList.add("cervena");
 }
 
+
 function ChangeFontSize(){
 var fontSize = parseInt(window.getComputedStyle(odstavec).fontSize);
 
 odstavec.style.fontSize = fontSize + 1 + "px";
 }
-
-
-
-
-
-
 
 
 
@@ -53,10 +48,6 @@ function Prehraj(elementSelector) {
     audioElement.play();
 }
 
-/**  
-* @param {string} elementSelector
-* 
-*/
 
 function Zastav(elementSelector) {
     let audioElement = document.querySelector(elementSelector);
@@ -64,5 +55,23 @@ function Zastav(elementSelector) {
 }
 
 
+function Ztis(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.muted = true;
+}
 
+function ChangeVolume(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.volume = 0.5;
+}
 
+function MaxVolume(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.volume = 1;
+}
+
+function BackToBeginning(elementSelector) {
+    let audioElement = document.querySelector(elementSelector);
+    audioElement.currentTime = 0;
+
+}
