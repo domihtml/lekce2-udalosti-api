@@ -1,9 +1,8 @@
 
 
-let nadpis = document.querySelector("h1");
-nadpis.classList.add("zluty");
 
-let odstavec = document.querySelector("#odstavec")
+
+/* mění vlastnosti odstavce */
 
 function Ztucni(udalost){
 udalost.target.style.fontWeight = "bold";
@@ -16,7 +15,9 @@ udalost.target.style.fontWeight ="normal";
 function Zmenbarvu(){
 
 odstavec.classList.add("cervena");
-}
+    }
+
+let odstavec = document.querySelector("#odstavec")
 
 
 function ChangeFontSize(){
@@ -27,17 +28,8 @@ odstavec.style.fontSize = fontSize + 1 + "px";
 
 
 
-/* 
-function Tucni() {
-    document.querySelector(".odstavecdva").style.fontWeight = "bold";
-}
 
-
-function Vracej() {
-    document.querySelector(".odstavecdva").style.fontWeight = "normal";
-}
-*/
-
+/* ovládání audio-elementu*/
 /**  
 * @param {string} elementSelector
 * 
@@ -57,7 +49,7 @@ function Zastav(elementSelector) {
 
 function Ztis(elementSelector) {
     let audioElement = document.querySelector(elementSelector);
-    audioElement.muted = true;
+    audioElement.volume = 0;
 }
 
 function ChangeVolume(elementSelector) {
@@ -75,3 +67,22 @@ function BackToBeginning(elementSelector) {
     audioElement.currentTime = 0;
 
 }
+
+
+
+/* ukoly v prubehu lekce 2
+
+
+
+
+let nadpis = document.querySelector("h1");
+nadpis.classList.add("zluty");
+
+function Tucni() {
+    document.querySelector(".odstavecdva").style.fontWeight = "bold";
+}
+
+function Vracej() {
+    document.querySelector(".odstavecdva").style.fontWeight = "normal";
+}
+*/
